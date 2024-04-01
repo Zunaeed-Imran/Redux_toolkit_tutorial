@@ -1,15 +1,14 @@
 
 import './App.css'
-import PostsView from './features/posts/PostsView'
+
 
 function App() {
 
 
   return (
     <>
-      <h1>Fetch Data.</h1>
+      <h1>CRUD</h1>
 
-      <PostsView/>
     </>
   )
 }
