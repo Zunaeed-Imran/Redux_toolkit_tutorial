@@ -22,4 +22,4 @@ in this repository i will practice redux toolkit.
 - Practicing counter app using redux toolkit.
 - learning how to use redux devtools.
 - Learning fetch data using redux toolkit.
-- 
+- Learning react CRUD app using redux toolkit.

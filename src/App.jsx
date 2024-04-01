@@ -1,5 +1,6 @@
 
 import './App.css'
+import Index from './routes'
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
   return (
     <>
       <h1>CRUD</h1>
-
+      <Index/>
     </>
   )
 }
