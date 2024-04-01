@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <h1>Counter App</h1>
+      <h1>Fetch Data.</h1>
 
       <PostsView/>
     </>
