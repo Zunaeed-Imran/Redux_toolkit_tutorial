@@ -15,3 +15,11 @@ in this repository i will practice redux toolkit.
 - first we install the react environment
 - than for redux toolkit `npm install @reduxjs/toolkit` in the terminal.
 -
+
+
+#### Done Task For Today
+- Learning counter app using redux toolkit.
+- Practicing counter app using redux toolkit.
+- learning how to use redux devtools.
+- Learning fetch data using redux toolkit.
+- 
