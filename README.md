@@ -14,7 +14,7 @@ in this repository i will practice redux toolkit.
 
 - first we install the react environment
 - than for redux toolkit `npm install @reduxjs/toolkit` in the terminal.
--
+- we install "axios" in this branch.
 
 
 #### Done Task For Today
