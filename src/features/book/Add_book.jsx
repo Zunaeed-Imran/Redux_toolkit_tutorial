@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { addBook } from './BooksSlice';
 
 const Add_book = () => {
@@ -8,13 +8,16 @@ const Add_book = () => {
   const [author, setAuthor] = useState('');
   const dispatch = useDispatch();
 
+  // we use nevagate for to take me to show book page after add book.
+  const navigate = useNavigate()
+
   const numberofBooks = useSelector(state => state.booksReducer.books.length);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const book = { id: numberofBooks + 1, title, author };
     dispatch(addBook(book));
-    Navigate("/show-books", { replace: true });
+    navigate("/show-books", { replace: true });
   };
 
   return (
