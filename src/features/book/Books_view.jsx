@@ -3,7 +3,9 @@ import { useSelector } from 'react-redux';
 
 const Books_view = () => {
 
-  const books = useSelector(state => state.bookSlice);
+  const books = useSelector(state => state.booksReducer.books);
+  console.log(books);
+
 
   return (
 
@@ -19,13 +21,22 @@ const Books_view = () => {
           </tr>
         </thead>
         <tbody>
-          {books && books.map((book) => {
+          {books &&
+            books.map((book) => {
             const { id, title, author } = book;
-            return <tr key={id}>
-              <td>{id}</td>
-              <td>{title}</td>
-              <td>{author}</td>
-            </tr>
+              return (
+                <tr key={id}>
+                  <td>{id}</td>
+                  <td>{title}</td>
+                  <td>{author}</td>
+                  <td>
+                    <button>Edit</button>
+                    <button onClick={() => {
+                      handleDeleteBook(id)
+                    }}>Delete</button>
+                  </td>
+                </tr>
+              );
           })}
         </tbody>
       </table>

@@ -1,18 +1,19 @@
-import { title } from 'process';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Navigate } from 'react-router-dom';
 
 const Add_book = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const numberofBooks = useSelector((state) => state.booksReducer.books.length);
+  const numberofBooks = useSelector(state => state.booksReducer.books.length);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     const book = { id: numberofBooks + 1, title, author };
-    dispatch(addBook(book))
+    dispatch(Add_book(book));
+    Navigate("/show-books", { replace: true });
   };
 
   return (

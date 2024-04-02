@@ -15,7 +15,7 @@ const Index = () => {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='/book-view' element={<Books_view/>} />
+        <Route path='/show-books' element={<Books_view/>} />
         <Route path='/add-book' element={<Add_book/>} />
         <Route path='*' element={<Error/>} />
       </Routes>
