@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
+import { addBook } from './BooksSlice';
 
 const Add_book = () => {
   const [title, setTitle] = useState('');
@@ -9,10 +10,10 @@ const Add_book = () => {
 
   const numberofBooks = useSelector(state => state.booksReducer.books.length);
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const book = { id: numberofBooks + 1, title, author };
-    dispatch(Add_book(book));
+    dispatch(addBook(book));
     Navigate("/show-books", { replace: true });
   };
 
@@ -26,7 +27,7 @@ const Add_book = () => {
             name="title"
             placeholder="BookTitle"
             value={title}
-            onChange={e => setTitle(e.target.value)}
+            onChange={(e) => setTitle(e.target.value)}
             required
           />
         </div>
@@ -36,7 +37,7 @@ const Add_book = () => {
             name="author"
             placeholder="Author"
             value={author}
-            onChange={e => setAuthor(e.target.value)}
+            onChange={(e) => setAuthor(e.target.value)}
             required
           />
         </div>
