@@ -1,11 +1,17 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteBook } from './BooksSlice';
 
 const Books_view = () => {
 
   const books = useSelector(state => state.booksReducer.books);
   console.log(books);
 
+  const dispatch = useDispatch();
+
+  const handleDeleteBook = (id) => {
+    dispatch(deleteBook(id));
+  }
 
   return (
 
